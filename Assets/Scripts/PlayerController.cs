@@ -54,7 +54,6 @@ public class PlayerController : MonoBehaviour
         if (count >= 10)
         {
             winText.text = "You win";
-            //Application.LoadLevel(Application.loadedLevel);
         }
     }
 

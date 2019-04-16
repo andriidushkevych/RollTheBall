@@ -5,6 +5,7 @@ public class Level : MonoBehaviour
 {
     public void LoadLevelByIndex(int sceneIndex)
     {
-        SceneManager.LoadScene(sceneIndex);
+        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(sceneIndex);        
     }
 }

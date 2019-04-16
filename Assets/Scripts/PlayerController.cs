@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private int count;
     private GameObject[] pickUps;
-    private float targetTime = 5.0f;
+    private float targetTime = 30.0f;
 
 
     void Start()
@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
         if (count >= 10)
         {
             winText.text = "You win";
+            //Application.LoadLevel(Application.loadedLevel);
         }
     }
 
@@ -70,6 +71,18 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (Time.timeScale == 1)
+            {
+                Time.timeScale = 0;
+            }
+            else
+            {
+                Time.timeScale = 1;
+            }
+        }
+
         targetTime -= Time.deltaTime;
         SetTimerText();
         if (targetTime <= 20.0f)

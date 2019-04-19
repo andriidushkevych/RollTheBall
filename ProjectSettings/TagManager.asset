@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pick Up
-  - MainMenuTag
+  - Pause
   layers:
   - Default
   - TransparentFX
@@ -15,7 +15,7 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
+  - 
   - 
   - 
   - 
